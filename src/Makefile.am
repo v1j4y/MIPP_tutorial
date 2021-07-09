@@ -1,7 +1,7 @@
 bin_PROGRAMS = main
-main_SOURCES = mipp_interface.cpp mipp_interface_fortran.f90 main.f90
+main_SOURCES = mipp_interface_fortran.f90 mipp_interface.cpp main.f90
 main_includedir = src/MIPP/src/
-main_CXXFLAGS = -std=gnu++11 -march=native -lgfortran
-main_FCFLAGS = 
+main_CXXFLAGS = -O3 -std=c++11 -march=native -lgfortran
+main_FCFLAGS =  -O3 -march=native
 main_CFLAGS =  
-main_LDFLAGS = -std=gnu++11 -march=native
+main_LDFLAGS = 
