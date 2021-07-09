@@ -1,0 +1,3 @@
+[submodule "src/MIPP"]
+	path = src/MIPP
+	url = https://github.com/aff3ct/MIPP
