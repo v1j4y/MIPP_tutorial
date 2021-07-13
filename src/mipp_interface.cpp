@@ -33,11 +33,13 @@ void mipp_dgemm_kernel(double *a, double *b, double *c, int32_t M, int32_t N, in
   for(int i = 0; i < M; i += 1) {
     for(int l = 0; l < K; l += 1) {
       ra = a[ i * K + l ];
+      double * c_int = c + i * N;
+      double * b_int = b + l * N;
       for(int j = 0; j < N; j += mipp::N<double>()) {
-	rc.load(c + i * N + j);
-	rb.load(b + l * N + j);
+	rc.load(c_int + j);
+	rb.load(b_int + j);
 	rc = mipp::fmadd(ra, rb, rc);
-        rc.store(c + i * N + j);
+        rc.store(c_int + j);
       }
     }
   }

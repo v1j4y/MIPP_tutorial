@@ -10,9 +10,9 @@ program main
   sze = 0
   call mipp_get_int_size_c(sze)
   print *,"sze = ", sze
-  M = 2048
-  N = 2048
-  K = 2048
+  M = 128
+  N = 128
+  K = 128
   print *, "M = ",M
   print *, "N = ",N
   print *, "K = ",K

@@ -13,7 +13,7 @@ AC_CONFIG_SRCDIR([src/main.f90])
 #AC_CONFIG_AUX_DIR
 
 # Make sure Fortran is available
-AC_PROG_FC([gfortran])
+AC_PROG_FC([ifort])
 
 # Make sure gcc is working
 AC_PROG_CC([gcc])
